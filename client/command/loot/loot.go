@@ -401,7 +401,7 @@ func IsText(sample []byte) bool {
 			// last char may be incomplete - ignore
 			break
 		}
-		if c == 0xFFFD || c < ' ' && c != '\n' && c != '\t' && c != '\f' {
+		if c == 0xFFFD || c < ' ' && c != '\n' && c != '\t' && c != '\f' && c != '\r' {
 			// decoding error or control character - not a text file
 			return false
 		}
